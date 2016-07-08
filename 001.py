@@ -8,7 +8,7 @@ The sum of these multiples is 23.
 Find the sum of all the multiples of 3 or 5 below 1000.
 """
 
-def sum_multiples(below, divs):
-    return sum(i for i in range(below) if any(i % div == 0 for div in divs))
+def sum_multiples(max, divs):
+    return sum(i for i in range(max) if any(i % div == 0 for div in divs))
 
 print(sum_multiples(1000, [3, 5]))

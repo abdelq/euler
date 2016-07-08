@@ -10,13 +10,13 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 find the sum of the even-valued terms.
 """
 
-def fib(max):
+def fibonacci(max):
     a, b = 0, 1
     while a < max:
         yield a
         a, b = b, a + b
 
 def sum_even_fib(max):
-    return sum(a for a in fib(max) if a % 2 == 0)
+    return sum(a for a in fibonacci(max) if a % 2 == 0)
 
 print(sum_even_fib(4e6))
